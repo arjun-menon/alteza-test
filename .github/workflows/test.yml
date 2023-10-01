@@ -1,0 +1,32 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build Website
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
+      pages: write
+      id-token: write
+      security-events: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.generate.outputs.page_url }}
+
+    steps:
+      - name: Generate Alteza Website
+        id: generate
+        # Improve a bit once https://github.com/orgs/community/discussions/10985 is implemented.
+        uses: arjun-menon/alteza-gh-action@main
+        with:
+          path: test_content

@@ -1,0 +1,3 @@
+[submodule "appletree"]
+	path = appletree
+	url = git@github.com:arjun-menon/appletree.git
