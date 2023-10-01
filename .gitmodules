@@ -1,3 +1,6 @@
 [submodule "appletree"]
 	path = appletree
 	url = git@github.com:arjun-menon/appletree.git
+[submodule "alteza"]
+	path = alteza
+	url = git@github.com:arjun-menon/alteza.git
