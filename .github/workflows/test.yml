@@ -29,4 +29,4 @@ jobs:
         # Improve a bit once https://github.com/orgs/community/discussions/10985 is implemented.
         uses: arjun-menon/alteza@master
         with:
-          path: test_content
+          path: alteza/test_content
